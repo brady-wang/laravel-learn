@@ -11,9 +11,11 @@
 |
 */
 
+use Illuminate\Support\Facades\App;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',"TestController@index");
+App::make('router')->get('/test',"TestController@index");
 Route::get('/test1',"TestController@test");

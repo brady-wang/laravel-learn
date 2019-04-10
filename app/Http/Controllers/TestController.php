@@ -7,7 +7,9 @@ use App\Events\Register;
 use App\Events\User;
 use App\Facades\Foo;
 use App\Lib\Tools\FooBar;
+use App\Providers\FooServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
@@ -23,7 +25,11 @@ class TestController extends Controller
 
     public function test()
     {
+        //echo $foo->get();
+
         echo (Foo::get());
+        //$foo = app()->make("foo");
+        //dd($foo->get());
     }
 
 
