@@ -161,6 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\TestServiceProvider::class,
         App\Providers\FooServiceProvider::class,
+	    App\Providers\AreaServiceProvider::class,
 
     ],
 
@@ -211,6 +212,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Foo' => App\Facades\Foo::class,
+	    'Area'=> App\Facades\Area::class,
 
     ],
 

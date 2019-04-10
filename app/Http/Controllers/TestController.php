@@ -6,6 +6,7 @@ use App\Brady\DemoInterface;
 use App\Events\Register;
 use App\Events\User;
 use App\Facades\Foo;
+use App\Facades\Area;
 use App\Lib\Tools\FooBar;
 use App\Providers\FooServiceProvider;
 use Illuminate\Http\Request;
@@ -30,6 +31,18 @@ class TestController extends Controller
         echo (Foo::get());
         //$foo = app()->make("foo");
         //dd($foo->get());
+    }
+
+    //测试area服务提供者
+    public function test2(Area $area)
+    {
+	    dd($area->get());
+    }
+
+    public function test3()
+    {
+		$res = Area::get();
+		dd($res);
     }
 
 
